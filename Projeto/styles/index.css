@@ -9,19 +9,3 @@
   --cinza: grey; 
   --verde: green;
 }
-
-body {
-    font-family: 'Roboto Condensed' sans-serif !important;
-  }
-
-.cadastro {
-    background-color: whitesmoke;
-    padding: 3px 0;
-}
-
-.cadastro h1 {
-    
-    padding: 1.3rem 0;
-    text-transform: uppercase;
-    font-weight: 200;
-}
