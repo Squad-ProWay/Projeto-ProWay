@@ -8,4 +8,30 @@
   --cinzaclaro: silver;
   --cinza: grey; 
   --verde: green;
+  --color1: #387CA6;
+  --color2: #36769A;
+  --color3: #2C5F73;
+  --color4: #63A5BF;
+  --color5: #8FC4D9;
+
+}
+
+.navbar-light .navbar-brand {
+  color: var(--color1);
+}
+
+.navbar-light .navbar-brand:hover {
+  color: var(--color5);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--color1);
+}
+
+.navbar-light .navbar-nav:hover .nav-link.active {
+  color: var(--color5);
+}
+
+.dropcolor {
+  color: white;
 }
