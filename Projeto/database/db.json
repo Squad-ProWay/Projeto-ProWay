@@ -1,0 +1,48 @@
+{
+  "categoria": [
+    {
+      "id": 1,
+      "nome": "Alimento"
+    },
+    {
+      "id": 2,
+      "nome": "Roupas"
+    },
+    {
+      "id": 3,
+      "nome": "Higiene"
+    },
+    {
+      "id": 4,
+      "nome": "Outros"
+    }
+  ],
+  "fornecedor": [
+    {
+      "id": 1,
+      "nome": "Atacadão"
+    },
+    {
+      "id": 2,
+      "nome": "Trevizo"
+    },
+    {
+      "id": 3,
+      "nome": "Mercadinho do João"
+    },
+    {
+      "id": 4,
+      "nome": "Outros"
+    }
+  ],
+  "produto": [
+    {
+      "id": 1,
+      "descricao": "Alicate",
+      "valor": "25,99",
+      "estoque": 134,
+      "fornecedor": "Mercadinho do João",
+      "categoria": "outros"
+    }
+  ]
+}
