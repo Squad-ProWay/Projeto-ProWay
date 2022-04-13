@@ -8,6 +8,12 @@
   --cinzaclaro: silver;
   --cinza: grey; 
   --verde: green;
+  --color1: #387CA6;
+  --color2: #36769A;
+  --color3: #2C5F73;
+  --color4: #63A5BF;
+  --color5: #8FC4D9;
+
 }
 
 body {
@@ -24,4 +30,24 @@ body {
     padding: 1.3rem 0;
     text-transform: uppercase;
     font-weight: 200;
+}
+
+.text-center {
+  margin-top: 40px;
+}
+
+.form-group {
+  margin: 5px;
+}
+
+.btn {
+  color: var(--branco);
+  background-color: var(--color1);
+  border: solid var(--color1);
+}
+
+.btn:hover {
+  color: var(--branco);
+  background-color: var(--color3);
+  border: solid var(--color3);
 }
