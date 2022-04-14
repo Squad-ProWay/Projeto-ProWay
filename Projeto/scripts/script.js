@@ -16,8 +16,8 @@ class Cliente {
     }
 
     salvar() {
-        //console.log(this)
-        fetch(urlBase, {
+        console.log(this)
+        fetch (urlBase, {
             method: 'POST',
             body: JSON.stringify(this),
             headers: {

@@ -1,53 +1,43 @@
 {
   "clientes": [
     {
-    
-    }
-  ],
-  "categoria": [
-    {
       "id": 1,
-      "nome": "Alimento"
+      "tipo": "1",
+      "nome": "",
+      "telefone": "",
+      "cpfOuCnpj": "",
+      "email": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cep": ""
     },
     {
       "id": 2,
-      "nome": "Roupas"
+      "tipo": "1",
+      "nome": "Paty",
+      "telefone": "paty@gmail.com",
+      "cpfOuCnpj": "098",
+      "email": "09876556767",
+      "logradouro": "Rua Belo Jardim",
+      "numero": "30",
+      "complemento": "apt 103",
+      "bairro": "Madalena",
+      "cep": "6089089"
     },
     {
       "id": 3,
-      "nome": "Higiene"
-    },
-    {
-      "id": 4,
-      "nome": "Outros"
-    }
-  ],
-  "fornecedor": [
-    {
-      "id": 1,
-      "nome": "Atacadão"
-    },
-    {
-      "id": 2,
-      "nome": "Trevizo"
-    },
-    {
-      "id": 3,
-      "nome": "Mercadinho do João"
-    },
-    {
-      "id": 4,
-      "nome": "Outros"
-    }
-  ],
-  "produto": [
-    {
-      "id": 1,
-      "descricao": "Alicate",
-      "valor": "25,99",
-      "estoque": 134,
-      "fornecedor": "Mercadinho do João",
-      "categoria": "outros"
+      "tipo": "1",
+      "nome": "José Paulo",
+      "telefone": "josé@gmail.com",
+      "cpfOuCnpj": "81 900007777",
+      "email": "09878909/0001",
+      "logradouro": "Rua do Ouro",
+      "numero": "40",
+      "complemento": "apt 601",
+      "bairro": "Jordão",
+      "cep": "50730120"
     }
   ]
 }
