@@ -3,61 +3,70 @@
     {
       "id": 1,
       "tipo": "1",
-      "nome": "luara ",
-      "telefone": "luagesteira@gmail.com",
-      "cpfOuCnpj": "71981854618",
-      "email": "05522627573",
-      "logradouro": "av acm",
-      "numero": "3354",
-      "complemento": "Cb2 Norte ",
-      "bairro": "alphavile",
-      "cep": "40280-000"
-    }
-  ],
-  "categoria": [
-    {
-      "id": 1,
-      "nome": "Alimento"
+      "nome": "",
+      "telefone": "",
+      "cpfOuCnpj": "",
+      "email": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cep": ""
     },
     {
       "id": 2,
-      "nome": "Roupas"
+      "tipo": "1",
+      "nome": "Paty",
+      "telefone": "paty@gmail.com",
+      "cpfOuCnpj": "098",
+      "email": "09876556767",
+      "logradouro": "Rua Belo Jardim",
+      "numero": "30",
+      "complemento": "apt 103",
+      "bairro": "Madalena",
+      "cep": "6089089"
     },
     {
       "id": 3,
-      "nome": "Higiene"
-    },
-    {
-      "id": 4,
-      "nome": "Outros"
+      "tipo": "1",
+      "nome": "José Paulo",
+      "telefone": "josé@gmail.com",
+      "cpfOuCnpj": "81 900007777",
+      "email": "09878909/0001",
+      "logradouro": "Rua do Ouro",
+      "numero": "40",
+      "complemento": "apt 601",
+      "bairro": "Jordão",
+      "cep": "50730120"
     }
   ],
-  "fornecedor": [
+  "estados": [
     {
       "id": 1,
-      "nome": "Atacadão"
+      "nome": "São Paulo"
+      
+    }
+  ],
+  "cidades": [
+    {
+      "id": 1,
+      "nome": "Paulínia"
+      
     },
     {
       "id": 2,
-      "nome": "Trevizo"
+      "nome": "Campinas"
+      
     },
     {
       "id": 3,
-      "nome": "Mercadinho do João"
+      "nome": "Santos"
+      
     },
     {
       "id": 4,
-      "nome": "Outros"
-    }
-  ],
-  "produto": [
-    {
-      "id": 1,
-      "descricao": "Alicate",
-      "valor": "25,99",
-      "estoque": 134,
-      "fornecedor": "Mercadinho do João",
-      "categoria": "outros"
+      "nome": "Limeira"
+      
     }
   ]
 }
