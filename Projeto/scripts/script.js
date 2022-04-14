@@ -29,6 +29,31 @@ class Cliente {
         })
             .catch(erro => console.log(erro))
     }
+    consultarTodos(display){
+
+        fetch(urlBase)
+        .then(x => x.text())
+        .then(data => display(data))
+    }
+    consultarPeloId(idCliente, display) {
+        fetch(`${urlBase}/${idCliente}`)
+            .then(x => x.text())
+            .then(data => display(data))
+    }
+
+    update(){
+
+        fetch(`${urlBase}/${this.id}`, {
+
+            method: 'PUT',
+            body: JSON.stringify(this),
+            headers: {
+                'Content-type': 'Application/json'
+            }
+        })
+
+    }
+
 }
 
 function loadEstados() {

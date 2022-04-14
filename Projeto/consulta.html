@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Form com dados</title>
+    <script src="./scripts/script.js"></script>
+  </head>
+  <body onload="load()">
+    <table>
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Cpf ou CNPJ</th>
+              <th>Email</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!--dados carregados dinamicamente -->
+      </tbody>
+  </table>
+
+
+    <script>
+
+      function load(){
+
+          let obj = new Cliente();
+          obj.consultarTodos(myCallback);
+      }
+
+      function myCallback(dados){
+
+          let minhaLista = JSON.parse(dados)
+          console.log(minhaLista)
+
+          var trs = ""
+          for (let indice in minhaLista) {
+            trs += `<tr> 
+                            <td> ${minhaLista[indice].id}</td>
+                            <td> ${minhaLista[indice].nome}</td>
+                            <td> ${minhaLista[indice].cpfOuCnpj}</td>
+                            <td> ${minhaLista[indice].email}</td>
+                            <td> <a href='editar.html?id=${minhaLista[indice].id}'>editar</a></td>
+                            <td> <a href='excluir.html?id=${minhaLista[indice].id}'>excluir</a></td>
+
+                        </tr>,3
+
+                      `
+          }
+          document.getElementsByTagName("tbody")[0].innerHTML = trs;
+      }
+
+      function apagar(idcontato) {
+            let ob = new Contato();
+            ob.excluir(idcontato);
+            load();
+      }
+    </script>
+  </body>
+</html>
