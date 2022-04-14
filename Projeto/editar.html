@@ -66,12 +66,8 @@
                 <li>
                   <a class="dropdown-item" href="cliente.html">Cliente</a>
                 </li>
-                <li><a class="dropdown-item" href="editar.html">Editar</a></li>
-                <li>
-                  <a class="dropdown-item" href="produto.html">Produto</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="categoria.html">Categoria</a>
+                <li><a class="dropdown-item" href="consulta.html">Consulta</a></li>
+
                 </li>
               </ul>
             </li>
@@ -217,7 +213,7 @@
               <button onclick="apagar()" class="btn btn-danger" type="submit">
                 Apagar
               </button>
-              <button class="cancelar">Cancelar</button>
+              <button oncliclkclass="cancelar">Voltar</button>
             </div>
           </div>
         </div>
@@ -244,31 +240,33 @@
         document.getElementById("numero").value = obj.numero
         document.getElementById("complemento").value = obj.complemento
         document.getElementById("bairro").value = obj.bairro
+        document.getElementById("estados").value = obj.estados
+        document.getElementById("cidades").value = obj.cidades
         document.getElementById("cep").value = obj.cep
       }
 
       function gravar() {
-        var tipo = document.getElementById('tipo').value
-            var nome = document.getElementById('nome').value
-            var email = document.getElementById('email').value
-            var cpfOuCnpj = document.getElementById('cpfOuCnpj').value
-            var telefone = document.getElementById('telefone').value
-            var logradouro = document.getElementById('logradouro').value
-            var numero = document.getElementById('numero').value
-            var complemento = document.getElementById('complemento').value
-            var bairro = document.getElementById('bairro').value
-            var cep = document.getElementById('cep').value
+            var tipo = document.getElementById("tipo").value
+            var nome = document.getElementById("nome").value
+            var email = document.getElementById("email").value
+            var cpfOuCnpj = document.getElementById("cpfOuCnpj").value
+            var telefone = document.getElementById("telefone").value
+            var logradouro = document.getElementById("logradouro").value
+            var numero = document.getElementById("numero").value
+            var complemento = document.getElementById("complemento").value
+            var bairro = document.getElementById("bairro").value
+            var estados = document.getElementById("estados").value
+            var cidades = document.getElementById("cidades").value
+            var cep = document.getElementById("cep").value
 
 
-            let obj = new Cliente (0, tipo, nome, email, cpfOuCnpj,  telefone, logradouro, numero, complemento, bairro, cep)
+            let obj = new Cliente (0, tipo, nome, email, cpfOuCnpj,  telefone, logradouro, numero, complemento, bairro, estados, cidades, cep)
 
-        ob.update();
-
-        window.history.back();
+        obj.update();
       }
 
       function apagar() {
-        let ob = new Contato();
+        let ob = new Cliente();
         ob.excluir(document.getElementsByTagName("input")[0].value);
       }
     </script>

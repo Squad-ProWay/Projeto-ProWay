@@ -1,13 +1,13 @@
 var urlBase = "http://localhost:3000/clientes"
 
 class Cliente {
-    constructor(id, tipo, nome, email, telefone, cpfOuCnpj, logradouro, numero, complemento, bairro, estados, cidades, cep) {
+    constructor(id, tipo, nome, email, cpfOuCnpj, telefone, logradouro, numero, complemento, bairro, estados, cidades, cep) {
         this.id = id,
         this.tipo = tipo,
         this.nome = nome,
-        this.telefone = email,
+        this.email = email,
         this.cpfOuCnpj = cpfOuCnpj,
-        this.email = telefone,
+        this.telefone = telefone,
         this.logradouro = logradouro,
         this.numero = numero,
         this.complemento = complemento,
@@ -29,12 +29,14 @@ class Cliente {
         })
             .catch(erro => console.log(erro))
     }
+
     consultarTodos(display){
 
         fetch(urlBase)
         .then(x => x.text())
         .then(data => display(data))
     }
+
     consultarPeloId(idCliente, display) {
         fetch(`${urlBase}/${idCliente}`)
             .then(x => x.text())

@@ -1,181 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/cap.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-        </script>
-    <link rel="stylesheet" href="styles/cliente.css">
-    <link rel="stylesheet" href="styles/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/cap.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/cliente.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="scripts/script.js"></script>
     <title>Cliente</title>
-</head>
+  </head>
 
-<body onload="loadCidades(); loadEstados()">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Capgemini</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navcolor" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class=" dropcolor nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Menu
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="cliente.html">Cliente</a></li>
-                            <li><a class="dropdown-item" href="consulta.html">Consulta</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+  <body onload="loadCidades(); loadEstados()" style="background-color:whitesmoke" >
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top px-5">
+        <a class="navbar-brand" href="#">Capgemini</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse navcolor"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="dropcolor nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="cliente.html">Cliente</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="consulta.html">Consulta</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-    </nav>
-    <div class='cadastro'>
-        <div class='text-center'>
-            <h1>Registro de Usuário</h1>
+      </nav>
+
+      <div class="cadastro">
+        <div class="text-center">
+          <h1>Registro de Usuário</h1>
         </div>
         <form>
-            <div class='align text-center mb-4 text-secondary'>
-                <div class="form-check form-check-inline d-inline-block">
-                    <input class="form-check-input-radio" type="radio" name="tipo" id="tipo" value="1"/>
-                    <label class="form-check-label">Pessoa Física</label>
-                </div>
-                <div class="form-check form-check-inline d-inline-block">
-                    <input class="form-check-input-radio" type="radio" name="tipo" id="tipo" value="2" />
-                    <label class="form-check-label">Pessoa Jurídica</label>
-                </div>
+          <div class="align text-center mb-4 text-secondary">
+            <div class="form-check form-check-inline d-inline-block">
+              <input
+                class="form-check-input-radio"
+                type="radio"
+                name="tipo"
+                id="tipo"
+                value="1"
+              />
+              <label class="form-check-label">Pessoa Física</label>
             </div>
-            <div class='row justify-content-center'>
-                <div class='col-4'>
-                    <div class="form-group">
-
-                        <input name='nome' id='nome' type="text" class="form-control" placeholder="Nome" required />
-
-                        <input name='nome' id='nome' type="text" class="form-control" placeholder="Nome" required />
-
-                        <input name='nome' id='nome' type="text" class="form-control" placeholder="Nome" required />
-
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='email' id='email' type="email" class="form-control" placeholder="Email" required />
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='cpfOuCnpj' id='cpfOuCnpj' type="text" class="form-control"
-
-                            placeholder="CPF ou CNPJ" required />
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='telefone' id='telefone' type="text" class="form-control" placeholder="Telefone"
-                            required />
-
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='telefone' id='telefone' type="text" class="form-control" placeholder="Telefone"
-                            required />
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='logradouro' id='logradouro' type="text" class="form-control"
-                            placeholder="Logradouro" required />
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='numero' id='numero' type="text" class="form-control" placeholder="Número" />
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='complemento' id='complemento' type="text" class="form-control"
-                            placeholder="Complemento" />
-                        <div class='line'></div>
-                    </div>
-                    <div class="form-group">
-                        <input name='bairro' id='bairro' type="text" class="form-control" placeholder="Bairro" />
-                        <div class='line'></div>
-                    </div>
-                    <select name='estado' id='estados' class="form-select" aria-label="">
-                        <!--Get cidade-->
-                    </select>
-                    <select name='cidade' id='cidades' class="form-select" aria-label="">
-                        <!--Get cidade-->
-                    </select>
-                    <div class="form-group">
-                        <input name='cep' id='cep' type="text" class="form-control" placeholder="CEP" required />
-                        <div class='line'></div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <button onclick="gravar()" class='btn btn-danger ' type="submit">Enviar</button>
-                    </div>
-                </div>
+            <div class="form-check form-check-inline d-inline-block">
+              <input
+                class="form-check-input-radio"
+                type="radio"
+                name="tipo"
+                id="tipo"
+                value="2"
+              />
+              <label class="form-check-label">Pessoa Jurídica</label>
             </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-4">
+              <div class="form-group">
+                <input
+                  name="nome"
+                  id="nome"
+                  type="text"
+                  class="form-control"
+                  placeholder="Nome"
+                  required
+                />
+
+                <div class="line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+                <div class="line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  name="cpfOuCnpj"
+                  id="cpfOuCnpj"
+                  type="text"
+                  class="form-control"
+                  placeholder="CPF ou CNPJ"
+                  required
+                />
+                <div class="line"></div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  name="telefone"
+                  id="telefone"
+                  type="text"
+                  class="form-control"
+                  placeholder="Telefone"
+                  required
+                />
+                <div class="line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  name="logradouro"
+                  id="logradouro"
+                  type="text"
+                  class="form-control"
+                  placeholder="Logradouro"
+                  required
+                />
+                <div class="line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  name="numero"
+                  id="numero"
+                  type="text"
+                  class="form-control"
+                  placeholder="Número"
+                />
+                <div class="line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  name="complemento"
+                  id="complemento"
+                  type="text"
+                  class="form-control"
+                  placeholder="Complemento"
+                />
+                <div class="line"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  name="bairro"
+                  id="bairro"
+                  type="text"
+                  class="form-control"
+                  placeholder="Bairro"
+                />
+                <div class="line"></div>
+              </div>
+              <select
+                name="estado"
+                id="estados"
+                class="form-select"
+                aria-label=""
+              >
+                <!--Get cidade-->
+              </select>
+              <select
+                name="cidade"
+                id="cidades"
+                class="form-select"
+                aria-label=""
+              >
+                <!--Get cidade-->
+              </select>
+              <div class="form-group">
+                <input
+                  name="cep"
+                  id="cep"
+                  type="text"
+                  class="form-control"
+                  placeholder="CEP"
+                  required
+                />
+                <div class="line"></div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button onclick="gravar()" class="btn btn-danger" type="submit">
+                  Enviar
+                </button>
+              </div>
+            </div>
+          </div>
         </form>
+      </div>
     </div>
+
     <script>
+      function gravar() {
+        console.log("ola");
 
-        function gravar() {
+        var tipo = document.getElementById("tipo").value;
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var cpfOuCnpj = document.getElementById("cpfOuCnpj").value;
+        var telefone = document.getElementById("telefone").value;
+        var logradouro = document.getElementById("logradouro").value;
+        var numero = document.getElementById("numero").value;
+        var complemento = document.getElementById("complemento").value;
+        var bairro = document.getElementById("bairro").value;
+        var estados = document.getElementById("estados").value;
+        var cidades = document.getElementById("cidades").value;
+        var cep = document.getElementById("cep").value;
 
-            console.log('ola')
+        let obj = new Cliente(
+          0,
+          tipo,
+          nome,
+          email,
+          cpfOuCnpj,
+          telefone,
+          logradouro,
+          numero,
+          complemento,
+          bairro,
+          estados,
+          cidades,
+          cep
+        );
 
-            var tipo = document.getElementById('tipo').value
-            var nome = document.getElementById('nome').value
-            var email = document.getElementById('email').value
-            var cpfOuCnpj = document.getElementById('cpfOuCnpj').value
-            var telefone = document.getElementById('telefone').value
-            var logradouro = document.getElementById('logradouro').value
-            var numero = document.getElementById('numero').value
-            var complemento = document.getElementById('complemento').value
-            var bairro = document.getElementById('bairro').value
-            var estados = document.getElementById('estados').value
-            var cidades = document.getElementById('cidades').value
-            var cep = document.getElementById('cep').value
+        obj.salvar();
+      }
 
-            let obj = new Cliente(0, tipo, nome, email, cpfOuCnpj, telefone, logradouro, numero, complemento, bairro, estados, cidades, cep)
-
-            obj.salvar()
+      function display(dados) {
+        //console.log(dados)
+        let lista = JSON.parse(dados);
+        var opt = "";
+        for (let ob in lista) {
+          opt +=
+            "<option var" + lista[ob].id + ">" + lista[ob].nome + "</option>";
         }
+        document.getElementById("cidades").innerHTML = opt;
+        //console.log(opt)
+      }
 
-        function display(dados) {
-            //console.log(dados)
-            let lista = JSON.parse(dados)
-            var opt = ""
-            for (let ob in lista) {
-                opt += "<option var" + lista[ob].id + ">" + lista[ob].nome + "</option>"
-
-            }
-            document.getElementById("cidades").innerHTML = opt;
-            //console.log(opt)
+      function display2(dados) {
+        //console.log(dados)
+        let lista = JSON.parse(dados);
+        var opt = "";
+        for (let ob in lista) {
+          opt +=
+            "<option var" + lista[ob].id + ">" + lista[ob].nome + "</option>";
         }
-
-        function display2(dados) {
-            //console.log(dados)
-            let lista = JSON.parse(dados)
-            var opt = ""
-            for (let ob in lista) {
-                opt += "<option var" + lista[ob].id + ">" + lista[ob].nome + "</option>"
-
-            }
-            document.getElementById("estados").innerHTML = opt;
-            //console.log(opt)
-        }
+        document.getElementById("estados").innerHTML = opt;
+        //console.log(opt)
+      }
     </script>
-</body>
-
+  </body>
 </html>
