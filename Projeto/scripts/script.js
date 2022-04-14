@@ -28,3 +28,15 @@ class Cliente {
             .catch(erro => console.log(erro))
     }
 }
+
+function loadEstados() {
+    fetch("http://localhost:3000/estados")
+        .then(x => x.text())
+        .then(estado => display2(estado))
+}
+
+function loadCidades() {
+    fetch("http://localhost:3000/cidades")
+        .then(x => x.text())
+        .then(cidade => display(cidade))
+}
