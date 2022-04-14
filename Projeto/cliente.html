@@ -12,6 +12,7 @@
         </script>
     <link rel="stylesheet" href="styles/cliente.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/script.js"></script>
     <title>Cliente</title>
 </head>
 
@@ -36,9 +37,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="cliente.html">Cliente</a></li>
-                            <li><a class="dropdown-item" href="fornecedor.html">Fornecedor</a></li>
-                            <li><a class="dropdown-item" href="produto.html">Produto</a></li>
-                            <li><a class="dropdown-item" href="categoria.html">Categoria</a></li>
+                            <li><a class="dropdown-item" href="consulta.html">Consulta</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -52,7 +51,7 @@
         <form>
             <div class='align text-center mb-4 text-secondary'>
                 <div class="form-check form-check-inline d-inline-block">
-                    <input class="form-check-input-radio" type="radio" name="tipo" id="tipo" value="1" />
+                    <input class="form-check-input-radio" type="radio" name="tipo" id="tipo" value="1"/>
                     <label class="form-check-label">Pessoa Física</label>
                 </div>
                 <div class="form-check form-check-inline d-inline-block">
@@ -63,26 +62,26 @@
             <div class='row justify-content-center'>
                 <div class='col-4'>
                     <div class="form-group">
-                        <input name='nome' id='nome' type="text" class="form-control" placeholder="Nome" />
+                        <input name='nome' id='nome' type="text" class="form-control" placeholder="Nome" required/>
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
-                        <input name='email' id='email' type="text" class="form-control" placeholder="Email" />
+                        <input name='email' id='email' type="email" class="form-control" placeholder="Email" required />
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
                         <input name='cpfOuCnpj' id='cpfOuCnpj' type="text" class="form-control"
-                            placeholder="CPF ou CNPJ" />
+                            placeholder="CPF ou CNPJ" required/>
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
-                        <input name='telefone1' id='telefone1' type="text" class="form-control"
-                            placeholder="Telefone" />
+                        <input name='telefone' id='telefone' type="text" class="form-control"
+                            placeholder="Telefone" required />
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
                         <input name='logradouro' id='logradouro' type="text" class="form-control"
-                            placeholder="Logradouro" />
+                            placeholder="Logradouro" required/>
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
@@ -107,16 +106,40 @@
                         <option>Recife</option>
                     </select>
                     <div class="form-group">
-                        <input name='cep' id='cep' type="text" class="form-control" placeholder="CEP" />
+                        <input name='cep' id='cep' type="text" class="form-control" placeholder="CEP" required/>
                         <div class='line'></div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class='btn btn-danger ' type="submit">Enviar</button>
+                        <button onclick="gravar()" class='btn btn-danger ' type="submit">Enviar</button>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+
+    <script>
+
+        function gravar() {
+
+            console.log('ola')
+
+            var tipo = document.getElementById('tipo').value
+            var nome = document.getElementById('nome').value
+            var email = document.getElementById('email').value
+            var cpfOuCnpj = document.getElementById('cpfOuCnpj').value
+            var telefone = document.getElementById('telefone').value
+            var logradouro = document.getElementById('logradouro').value
+            var numero = document.getElementById('numero').value
+            var complemento = document.getElementById('complemento').value
+            var bairro = document.getElementById('bairro').value
+            var cep = document.getElementById('cep').value
+
+            let obj = new Cliente (0, tipo, nome, email, cpfOuCnpj,  telefone, logradouro, numero, complemento, bairro, cep)
+
+            obj.salvar()
+            
+        }
+    </script>
 </body>
 
 </html>

@@ -1,7 +1,17 @@
 {
   "clientes": [
     {
-    
+      "id": 1,
+      "tipo": "1",
+      "nome": "luara ",
+      "telefone": "luagesteira@gmail.com",
+      "cpfOuCnpj": "71981854618",
+      "email": "05522627573",
+      "logradouro": "av acm",
+      "numero": "3354",
+      "complemento": "Cb2 Norte ",
+      "bairro": "alphavile",
+      "cep": "40280-000"
     }
   ],
   "categoria": [
