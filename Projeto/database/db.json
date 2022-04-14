@@ -1,15 +1,15 @@
 {
   "clientes": [
     {
-      "id": 1,
+      "id": 2,
       "tipo": "1",
-      "nome": "luara ",
-      "email": "luagesteira@gmail.com",
-      "cpfOuCnpj": "05522627573",
-      "telefone": "71981854618",
-      "logradouro": "av acm",
-      "numero": "3354",
-      "complemento": "Cb2 Norte ",
+      "nome": "luis",
+      "email": "luis@gmail.com",
+      "cpfOuCnpj": "54545454544",
+      "telefone": "71981854615",
+      "logradouro": "Rua Belo Jardim",
+      "numero": "88",
+      "complemento": "ao lado do sine",
       "bairro": "alphavile",
       "estados": "São Paulo",
       "cidades": "Paulínia",

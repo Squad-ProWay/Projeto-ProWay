@@ -38,6 +38,50 @@ body {
 .form-group {
   margin: 5px;
 }
+.navbar-light .navbar-brand {
 
+  color: var(--color1);
+
+}
+
+
+
+.navbar-light .navbar-brand:hover {
+
+  color: var(--color5);
+
+}
+
+
+
+.navbar-light .navbar-nav .nav-link.active {
+
+  color: var(--color1);
+
+}
+
+
+
+.navbar-light .navbar-nav:hover .nav-link.active {
+
+  color: var(--color5);
+
+}
+
+
+
+.navbar-light .navbar-nav .nav-link {
+
+  color: var(--color1) !important;
+
+}
+
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+
+  color: var(--color5) !important;
+
+}
 
 
