@@ -12,6 +12,7 @@
         </script>
     <link rel="stylesheet" href="styles/cliente.css">
     <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/script.js"></script>
     <title>Cliente</title>
 </head>
 
@@ -67,7 +68,7 @@
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
-                        <input name='email' id='email' type="text" class="form-control" placeholder="Email" required />
+                        <input name='email' id='email' type="email" class="form-control" placeholder="Email" required />
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
@@ -76,7 +77,7 @@
                         <div class='line'></div>
                     </div>
                     <div class="form-group">
-                        <input name='telefone1' id='telefone1' type="text" class="form-control"
+                        <input name='telefone' id='telefone' type="text" class="form-control"
                             placeholder="Telefone" required />
                         <div class='line'></div>
                     </div>
@@ -119,19 +120,24 @@
     </div>
 
     <script>
+
         function gravar() {
-            var tipo = document.getElementsByTagName('input')[0].value
-            var tipo = document.getElementsByTagName('input')[1].value
-            var nome = document.getElementsByTagName('input')[2].value
-            var email = document.getElementsByTagName('input')[3].value
-            var cpfOuCnpj = document.getElementsByTagName('input')[4].value
-            var Telefone = document.getElementsByTagName('input')[5].value
-            var logradouro = document.getElementsByTagName('input')[6].value
-            var numero = document.getElementsByTagName('input')[7].value
-            var complemento = document.getElementsByTagName('input')[8].value
-            var bairro = document.getElementsByTagName('input')[9].value
-            var cep = document.getElementsByTagName('input')[10].value
-            let obj = new Cliente(0, tipo, nome, email, cpfOuCnpj,  telefone, logradouro, numero, complemento, bairro, cep)
+
+            console.log('ola')
+
+            var tipo = document.getElementById('tipo').value
+            var nome = document.getElementById('nome').value
+            var email = document.getElementById('email').value
+            var cpfOuCnpj = document.getElementById('cpfOuCnpj').value
+            var telefone = document.getElementById('telefone').value
+            var logradouro = document.getElementById('logradouro').value
+            var numero = document.getElementById('numero').value
+            var complemento = document.getElementById('complemento').value
+            var bairro = document.getElementById('bairro').value
+            var cep = document.getElementById('cep').value
+
+            let obj = new Cliente (0, tipo, nome, email, cpfOuCnpj,  telefone, logradouro, numero, complemento, bairro, cep)
+
             obj.salvar()
             
         }
