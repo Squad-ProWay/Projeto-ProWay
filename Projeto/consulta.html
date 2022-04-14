@@ -21,79 +21,87 @@
     <script src="scripts/script.js"></script>
     <title>Consulta</title>
   </head>
-  <body onload="load()">
+  <body onload="load()" style="background-color: whitesmoke">
     <div class="container">
       <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top px-5">
-        <a class="navbar-brand" href="#">Capgemini</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-dark fixed-top px-5"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse navcolor"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="dropcolor nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Menu
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="cliente.html">Cliente</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="consulta.html">Consulta</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div style="margin-top: 10%">
-      <table class="table table-striped">
-        <thead class="bg-primary text-white">
-          <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Cpf ou CNPJ</th>
-            <th>Email</th>
-            <th>Editar</th>
-            <th>Excluir</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!--dados carregados dinamicamente -->
-        </tbody>
-      </table>
-    </div>
+          <img
+            src="./images/kisspng-capgemini-logo-business-insuretech-connect-cfo-ris-5b3e023ce468a9.7869716015307904609356.jpg"
+            alt="Capgemini"
+            width="100"
+            height="60"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse navcolor"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="dropcolor nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="cliente.html">Cliente</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="consulta.html">Consulta</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div style="margin-top: 10%">
+        <table class="table table-striped">
+          <thead class="bg-primary text-white">
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Cpf ou CNPJ</th>
+              <th>Email</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--dados carregados dinamicamente -->
+          </tbody>
+        </table>
+      </div>
       <div class="mb-5 d-flex justify-content-evenly">
-
-        <button class="btn btn-primary" ><a style="text-decoration: none; color: white;" href="cliente.html">Voltar</a></button>
-
-
-    </div>
+        <button class="btn btn-primary">
+          <a style="text-decoration: none; color: white" href="cliente.html"
+            >Voltar</a
+          >
+        </button>
+      </div>
       <script>
         function load() {
           let obj = new Cliente();
@@ -112,16 +120,16 @@
                             <td> ${minhaLista[indice].cpfOuCnpj}</td>
                             <td> ${minhaLista[indice].email}</td>
                             <td> <a href='editar.html?id=${minhaLista[indice].id}'>editar</a></td>
-                            <td> <a href='excluir.html?id=${minhaLista[indice].id}'>excluir</a></td>
+                            <td> <button onclick="deletar(${minhaLista[indice].id})"">excluir</button></td>
 
                         </tr>
 
-                      `
+                      `;
           }
           document.getElementsByTagName("tbody")[0].innerHTML = trs;
         }
 
-        function apagar(idcliente) {
+        function deletar(idcliente) {
           let ob = new Cliente();
           ob.excluir(idcliente);
           load();

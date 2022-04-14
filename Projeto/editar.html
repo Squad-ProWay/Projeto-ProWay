@@ -21,7 +21,7 @@
     <title>Editar Clientes</title>
   </head>
 
-  <body onload="pegarParametro()">
+  <body onload="pegarParametro(); loadCidades(); loadEstados();" style="background-color: whitesmoke">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
       <div class="container">
         <img
@@ -187,14 +187,22 @@
               />
               <div class="line"></div>
             </div>
-            <select name="estado" id="estado" class="form-select" aria-label="">
-              <option value="0">Selecione o Estado</option>
-              <option>Pernambuco</option>
-            </select>
-            <select name="cidade" id="cidade" class="form-select" aria-label="">
-              <option>Selecione a cidade</option>
-              <option>Recife</option>
-            </select>
+            <select
+                name="estado"
+                id="estados"
+                class="form-select"
+                aria-label=""
+              >
+                <!--Get cidade-->
+              </select>
+              <select
+                name="cidade"
+                id="cidades"
+                class="form-select"
+                aria-label=""
+              >
+                <!--Get cidade-->
+              </select>
             <div class="form-group">
               <input
                 name="cep"
@@ -206,14 +214,11 @@
               />
               <div class="line"></div>
             </div>
-            <div class="d-flex justify-content-center">
-              <button onclick="gravar()" class="btn btn-danger" type="submit">
+            <div class="d-flex justify-content-between mt-4">
+              <button onclick="gravar()" class="btn btn-primary" type="submit">
                 Salvar
               </button>
-              <button onclick="apagar()" class="btn btn-danger" type="submit">
-                Apagar
-              </button>
-              <button oncliclkclass="cancelar">Voltar</button>
+              <button oncliclkclass="cancelar" class="btn btn-secondary"><a style="text-decoration: none; color: white;" href="consulta.html">Voltar</a></button>
             </div>
           </div>
         </div>
@@ -264,10 +269,34 @@
 
         obj.update();
       }
+      function display(dados) {
 
-      function apagar() {
-        let ob = new Cliente();
-        ob.excluir(document.getElementsByTagName("input")[0].value);
+      //console.log(dados)
+          let lista = JSON.parse(dados)
+          var opt = ""
+          for (let ob in lista) {
+          opt += "<option var" + lista[ob].id + ">" + lista[ob].nome + "</option>"
+      }
+
+      document.getElementById("cidades").innerHTML = opt;
+      //console.log(opt)
+     }
+
+    function display2(dados) {
+        //console.log(dados)
+        let lista = JSON.parse(dados)
+        var opt = ""
+        for (let ob in lista) {
+          opt += "<option var" + lista[ob].id + ">" + lista[ob].nome + "</option>"
+        }
+      document.getElementById("estados").innerHTML = opt;
+        //console.log(opt)
+    }
+
+      function deletar(idcliente) {
+          let ob = new Cliente();
+          ob.excluir(idcliente);
+          load();
       }
     </script>
   </body>

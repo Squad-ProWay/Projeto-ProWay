@@ -39,15 +39,5 @@ body {
   margin: 5px;
 }
 
-.btn {
-  color: var(--branco);
-  background-color: var(--color1);
-  border: solid var(--color1);
-}
 
-.btn:hover {
-  color: var(--branco);
-  background-color: var(--color3);
-  border: solid var(--color3);
-}
 

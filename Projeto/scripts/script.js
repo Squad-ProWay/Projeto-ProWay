@@ -56,6 +56,13 @@ class Cliente {
 
     }
 
+    excluir(idCliente) {
+        fetch(`${urlBase}/${idCliente}`, {
+            method: 'DELETE'
+        })
+    }
+
+
 }
 
 function loadEstados() {
