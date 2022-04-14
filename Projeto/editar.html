@@ -267,10 +267,14 @@
         window.history.back();
       }
 
-      function apagar() {
-        let ob = new Contato();
-        ob.excluir(document.getElementsByTagName("input")[0].value);
-      }
+      function apagar () {
+            let ob = new Cliente();
+            ob.excluir(document.getElementsByTagName('input')[0].value, voltar)
+        }
+
+        function voltar () {
+            window.history.back()
+        }
     </script>
   </body>
 </html>

@@ -51,7 +51,13 @@ class Cliente {
                 'Content-type': 'Application/json'
             }
         })
+    }
 
+    excluir(idcliente) {
+        fetch(`${urlBase}/${idcliente}`,{
+            method: 'DELETE'
+        })
+        .then(voltar())
     }
 
 }

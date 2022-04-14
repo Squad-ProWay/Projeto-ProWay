@@ -53,6 +53,21 @@
       "estados": "São Paulo",
       "cidades": "Campinas",
       "cep": "7045623"
+    },
+    {
+      "id": 5,
+      "tipo": "1",
+      "nome": "Taciana",
+      "telefone": "taciana@gmail.com",
+      "cpfOuCnpj": "87 99888-0909",
+      "email": "09876556767",
+      "logradouro": "Rua Japecanga",
+      "numero": "32",
+      "complemento": "apt 601",
+      "bairro": "Piedade",
+      "estados": "São Paulo",
+      "cidades": "Paulínia",
+      "cep": "50730120"
     }
   ],
   "estados": [
