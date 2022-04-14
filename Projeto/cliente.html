@@ -133,9 +133,11 @@
             var numero = document.getElementById('numero').value
             var complemento = document.getElementById('complemento').value
             var bairro = document.getElementById('bairro').value
+            var estados = document.getElementById('estados').value
+            var cidades = document.getElementById('cidades').value
             var cep = document.getElementById('cep').value
 
-            let obj = new Cliente(0, tipo, nome, email, cpfOuCnpj, telefone, logradouro, numero, complemento, bairro, cep)
+            let obj = new Cliente(0, tipo, nome, email, cpfOuCnpj, telefone, logradouro, numero, complemento, bairro, estados, cidades, cep)
 
             obj.salvar()
         }

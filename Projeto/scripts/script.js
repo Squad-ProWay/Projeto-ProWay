@@ -1,7 +1,7 @@
 var urlBase = "http://localhost:3000/clientes"
 
 class Cliente {
-    constructor(id, tipo, nome, email, telefone, cpfOuCnpj, logradouro, numero, complemento, bairro, cep) {
+    constructor(id, tipo, nome, email, telefone, cpfOuCnpj, logradouro, numero, complemento, bairro, estados, cidades, cep) {
         this.id = id,
         this.tipo = tipo,
         this.nome = nome,
@@ -12,6 +12,8 @@ class Cliente {
         this.numero = numero,
         this.complemento = complemento,
         this.bairro = bairro,
+        this.estados = estados,
+        this.cidades = cidades,
         this.cep = cep
     }
 
