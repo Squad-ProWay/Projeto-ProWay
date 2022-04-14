@@ -38,35 +38,45 @@
       "complemento": "apt 601",
       "bairro": "Jordão",
       "cep": "50730120"
+    },
+    {
+      "id": 4,
+      "tipo": "1",
+      "nome": "Pedro ",
+      "telefone": "pedro@gmail.com",
+      "cpfOuCnpj": "81 99889-6556",
+      "email": "09809809878",
+      "logradouro": "Rua das Flores",
+      "numero": "83",
+      "complemento": "apt 504",
+      "bairro": "Boa Viagem",
+      "estados": "São Paulo",
+      "cidades": "Campinas",
+      "cep": "7045623"
     }
   ],
   "estados": [
     {
       "id": 1,
       "nome": "São Paulo"
-      
     }
   ],
   "cidades": [
     {
       "id": 1,
       "nome": "Paulínia"
-      
     },
     {
       "id": 2,
       "nome": "Campinas"
-      
     },
     {
       "id": 3,
       "nome": "Santos"
-      
     },
     {
       "id": 4,
       "nome": "Limeira"
-      
     }
   ]
 }
